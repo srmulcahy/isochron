@@ -14,7 +14,7 @@ uncertainty, and fit statistics from the measured data.
 Installation 
 ------------
 
-Install directly from Github using [Hadley's devtools package](https://github.com/hadley/devtools)
+Install directly from Github using the [devtools package](https://github.com/hadley/devtools)
 
 ```r
 library(devtools)
