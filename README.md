@@ -3,7 +3,7 @@ isochron
 
 
 - **Author**: Sean R. Mulcahy
-- **License**: [MIT](http://www.opensource.org/licenses/mit-license.php)
+- **License**: [CC0](http://creativecommons.org/publicdomain/zero/1.0/)
 - [Package source code on Github](https://github.com/srmulcahy/isochron)
 
 `isochron` is an R package that calculates best fit lines to geochemical data 
@@ -14,7 +14,7 @@ uncertainty, and fit statistics from the measured data.
 Installation 
 ------------
 
-Install directly from Github using the [devtools package](https://github.com/hadley/devtools)
+Install directly from Github using [Hadley's devtools package](https://github.com/hadley/devtools)
 
 ```r
 library(devtools)
