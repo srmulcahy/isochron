@@ -1,0 +1,265 @@
+source("/Users/srmulcahy/Documents/RScripts/isochron/R/tanhci.R")
+ci <- tanhci(P$dat, P$coef$slope)
+ci <- tanhci(P$dat, P$coef$slope, n = 100)
+hist(ci$slope)
+ci <- tanhci(P$dat, P$coef$slope, n = 500)
+ci <- tanhci(P$dat, P$coef$slope, n = 300)
+ci <- tanhci(P$dat, P$coef$slope, n = 300)\
+ci <- tanhci(P$dat, P$coef$slope, n = 300)
+ci
+source("/Users/srmulcahy/Documents/RScripts/isochron/R/ciplt.R")
+ciplt(ci$slope)
+ci <- tanhci(P$dat, P$coef$slope, n = 999)
+ci <- tanhci(P$dat, P$coef$slope, n = 500)
+structure(list(hours = c(63.06666647, 63.9999998, 64.93333313, #
+65.86666646, 66.79999979, 67.73333312, 68.66666645, 69.59999978, #
+70.53333311, 71.46666644, 72.39999977), value = c(22657L, 21535L, #
+20797L, 20687L, 20129L, 19671L, 19066L, 19534L, 19994L, 19575L, #
+21466L)), .Names = c("hours", "value"), row.names = 60:70, class = "data.frame")
+dat <- structure(list(hours = c(63.06666647, 63.9999998, 64.93333313, #
+65.86666646, 66.79999979, 67.73333312, 68.66666645, 69.59999978, #
+70.53333311, 71.46666644, 72.39999977), value = c(22657L, 21535L, #
+20797L, 20687L, 20129L, 19671L, 19066L, 19534L, 19994L, 19575L, #
+21466L)), .Names = c("hours", "value"), row.names = 60:70, class = "data.frame")
+data
+D <- structure(list(hours = c(63.06666647, 63.9999998, 64.93333313, #
+65.86666646, 66.79999979, 67.73333312, 68.66666645, 69.59999978, #
+70.53333311, 71.46666644, 72.39999977), value = c(22657L, 21535L, #
+20797L, 20687L, 20129L, 19671L, 19066L, 19534L, 19994L, 19575L, #
+21466L)), .Names = c("hours", "value"), row.names = 60:70, class = "data.frame")
+D
+plot(D$hours, D$value)
+sm <- smooth.spline(D$hours, D$value, spar = 0.5)
+lines(sm)
+sm <- smooth.spline(D$hours, D$value)
+sm
+lines(sm)
+sm <- smooth.spline(D$hours, D$value, spar = 1)
+plot(D$hours, D$value)
+sm <- smooth.spline(D$hours, D$value, spar = 1)
+lines(sm)
+sm <- smooth.spline(D$hours, D$value, spar = 0.7)
+lines(sm)
+sm <- smooth.spline(D$hours, D$value, spar = 0.25)
+lines(sm)
+sm <- smooth.spline(D$hours, D$value, spar = 0.4)
+lines(sm)
+sm <- smooth.spline(D$hours, D$value, spar = 0.5)
+lines(sm)
+plot(D$hours, D$value)
+lines(sm, color = "red")
+lines(sm, col = "red")
+sm
+summary(sm)
+sm$x
+sm$y
+D
+sm$data
+sm$w
+dm$fit
+sm$fit
+sm$df
+sm$lev
+sm$yin
+plot(x, sm$yin)
+plot(D$x, sm$yin)
+length(D$x)
+plot(D$hours, sm$yin)
+plot(D$hours, sm$y)
+sm$y
+help(splinefun)
+source("/Users/srmulcahy/Documents/RScripts/Investing/mansfield.R")
+amp <- read.table("~/Google Drive/dev/epma/test/amphibole.csv", header = T, sep = ",")
+amp
+source("/Users/srmulcahy/Google Drive/dev/epma/R/cations.R")
+cat <- cations(amp)
+source("/Users/srmulcahy/Google Drive/dev/epma/R/cations.R")
+cat <- cations(amp)
+source("/Users/srmulcahy/Google Drive/dev/epma/R/cations.R")
+cat <- cations(amp)
+source("/Users/srmulcahy/Google Drive/dev/epma/R/cations.R")
+cat <- cations(amp)
+source("/Users/srmulcahy/Google Drive/dev/epma/R/cations.R")
+cat <- cations(amp)
+source("/Users/srmulcahy/Google Drive/dev/epma/R/cations.R")
+cat <- cations(amp)
+source("/Users/srmulcahy/Google Drive/dev/epma/R/cations.R")
+cat <- cations(amp)
+amp <- read.table("~/Google Drive/dev/epma/test/amphibole.csv", header = T, sep = ",")
+source("/Users/srmulcahy/Google Drive/dev/epma/R/cations.R")
+amp <- read.table("~/Google Drive/dev/epma/test/amphibole.csv", header = T, sep = ",")
+amp
+cat <- cations(amp)
+cat
+cat <- cations(amp)
+cat
+source("/Users/srmulcahy/Google Drive/dev/epma/R/cations.R")
+cat <- cations(amp)
+cat
+cat <- cations(amp)
+cat
+table
+tbl
+tab
+cat
+require(RFOC)
+demo(RFOC)
+help(RFOC)
+net()
+qpoint(90, 45)
+qpoint(270, 45)
+Wnet()
+pnet()
+df <- read.table('~/Desktop/L.txt', header = F, sep = ',')
+df
+net()
+qpoint(df$V1, df$V2)
+qpoint(df$V1, df$V2, pch = 21, col = 'blue')
+qpoint(df$V1, df$V2, pch = 19, col = 'blue')
+net()
+qpoint(df$V1, df$V2, pch = 19)
+alpha95(df$V1, df$V2)
+help(alpha95)
+ALPH = alpha95(df$V1, df$V2)
+addsmallcirc(ALPH$Dr, 90-ALPH$Ir, ALPH$Alph95, BALL.radius = 1, N = 25,#
+add = TRUE, lwd=1, col='blue')
+addsmallcirc(ALPH$Dr, ALPH$Ir, ALPH$Alph95, BALL.radius = 1, N = 25,#
+add = TRUE, lwd=1, col='blue')
+net()
+qpoint(df$V1, df$V2, pch = 19, col = 'blue')
+net()
+qpoint(df$V1, df$V2, pch = 19)
+ALPH = alpha95(df$V1, df$V2)
+addsmallcirc(ALPH$Dr, ALPH$Ir, ALPH$Alph95, BALL.radius = 1, N = 25,#
+add = TRUE, lwd=1, col='red')
+help(addsmallcirc)
+help(contour)
+help(kte2d)
+help(kde2d)
+KT = kde2d(df$V1, df$V2, n=50, lims=c(-1, 1, -1, 1) )
+contour(KT$x, KT$y, KT$z, add=TRUE, lwd=1.2)
+demo(RFOC)
+require(RFOC)
+help(RFOC)
+df <- read.table('~/Desktop/L.txt', header = F, sep = ',')
+KT = kde2d(df$V1, df$V2, n=50, lims=c(-1, 1, -1, 1) )
+CC = PLTcirc(PLOT=FALSE, add=FALSE,  ndiv=36,  angs=c(-pi, pi)) image(KT$x, KT$y, KT$z, add=TRUE, col=terrain.colors(100))
+CC = PLTcirc(PLOT=FALSE, add=FALSE,  ndiv=36,  angs=c(-pi, pi))
+image(KT$x, KT$y, KT$z, add=TRUE, col=terrain.colors(100))
+KT = kde2d(df$V2, df$V2, n=50, lims=c(-1, 1, -1, 1) )
+CC = PLTcirc(PLOT=FALSE, add=FALSE,  ndiv=36,  angs=c(-pi, pi))
+KT = kde2d(df$V2, df$V2, n=50, lims=c(-1, 1, -1, 1) )
+image(KT$x, KT$y, KT$z, add=TRUE, col=terrain.colors(100))
+head(PXX)
+head(PZZ)
+load(PZZ)
+PZZ = focpoint(df$V1, df$V2, col='red', pch=3, lab="", UP=FALSE)
+net()
+PZZ = focpoint(df$V1, df$V2, col='red', pch=3, lab="", UP=FALSE)
+df
+KP = kde2d(PZZ$x, PZZ$y, n=50, lims=c(-1, 1, -1, 1))
+KP
+CC = PLTcirc(PLOT=FALSE, add=FALSE,  ndiv=36,  angs=c(-pi, pi))
+image(KP$x, KP$y, KP$z, add=TRUE, col=terrain.colors(100))
+antipolygon(CC$x,CC$y,col="white")
+net(add=1)
+contour(KP$x, KP$y, KP$z, add=TRUE, lwd=1.2)
+antipolygon(CC$x,CC$y,col="white")
+PZZ = focpoint(df$V1, df$V2, col='red', pch=3, lab="", UP=FALSE)
+net()
+contour(KP$x, KP$y, KP$z, add=TRUE, lwd=1.2)
+antipolygon(CC$x,CC$y,col="white")
+PZZ = focpoint(df$V1, df$V2, col='red', pch=3, lab="", UP=FALSE)
+net(add = 1)
+contour(KP$x, KP$y, KP$z, add=TRUE, lwd=1.2)
+net(add = 1)
+df <- read.table('~/Desktop/L.txt', header = F, sep = ',')
+LIN = focpoint(df$V1, df$V2, col='red', pch=3, lab="", UP=FALSE)
+net()
+LIN = focpoint(df$V1, df$V2, col='red', pch=3, lab="", UP=FALSE)
+LP = kde2d(LIN$x, LIN$y, n=50, lims=c(-1, 1, -1, 1))
+CC = PLTcirc(PLOT=FALSE, add=FALSE,  ndiv=36,  angs=c(-pi, pi))
+image(LP$x, LP$y, LP$z, add=TRUE, col=terrain.colors(100))
+contour(LP$x, LP$y, LP$z, add=TRUE, lwd=1.2)
+antipolygon(CC$x,CC$y,col="white")
+net(add=1)
+help(contour)
+help(image)
+image(LP$x, LP$y, LP$z, add=TRUE, col=rainbow(100))
+contour(LP$x, LP$y, LP$z, add=TRUE, lwd=1.2)
+antipolygon(CC$x,CC$y,col="white")
+image(LP$x, LP$y, LP$z, add=TRUE, col=heat.colors(100))
+net()
+image(LP$x, LP$y, LP$z, add=TRUE, col=heat.colors(100))
+image(LP$x, LP$y, LP$z, add=TRUE, col=topo.colors(100))
+net()
+image(LP$x, LP$y, LP$z, add=TRUE, col=topo.colors(100))
+contour(LP$x, LP$y, LP$z, add=TRUE, lwd=1.2)
+antipolygon(CC$x,CC$y,col="white")
+net(add=1)
+net()
+image(LP$x, LP$y, LP$z, add=TRUE, col=topo.colors(100))
+net()
+image(LP$x, LP$y, LP$z, add=TRUE, col=topo.colors(100))
+net(add=1)
+contour(LP$x, LP$y, LP$z, add=TRUE, lwd=1.2)
+antipolygon(CC$x,CC$y,col="white")
+net()
+image(LP$x, LP$y, LP$z, add=TRUE, col=topo.colors(100))
+contour(LP$x, LP$y, LP$z, add=TRUE, lwd=1.2)
+antipolygon(CC$x,CC$y,col="white")
+require(RFOC)
+help(CONVERTSDR)
+load("/Users/srmulcahy/Google Drive/dev/isochron/data/pdp133.rda")
+source("/Users/srmulcahy/Google Drive/dev/isochron/R/tanh.R")
+P <- tanh(pdp133$x, pdp133$y, pdp133$sx, pdp133$sy)
+P
+source("/Users/srmulcahy/Google Drive/dev/isochron/R/isoplt.R")
+isoplt(P)
+help(rlm)
+rlm
+UseMethod("rlm")
+MASS
+R <- rlm(maya$y~maya$x, method="MM", a = 1, b = 1.2, c = 3, maxit = 50)
+R <- rlm(pdp133$y~pdp133$x, method="MM", a = 1, b = 1.2, c = 3, maxit = 50)
+R
+R$w
+R$s
+R <- rlm(pdp133$y~pdp133$x, method="M", a = 1, b = 1.2, c = 3, maxit = 50)
+R <- rlm(pdp133$y~pdp133$x, method="M", a = 1, b = 1.634, c = 4, maxit = 50)
+R <- rlm(pdp133$y~pdp133$x, method="MM", a = 1, b = 1.634, c = 4, maxit = 50)
+R
+R$w
+R$w/min(R$w)
+R$wresid
+P
+source("/Users/srmulcahy/Google Drive/dev/isochron/test/rm1.csv")
+rm1 <- read.table("/Users/srmulcahy/Google Drive/dev/isochron/test/rm1.csv", header = T, sep = ",")
+rm1
+P <- tanh(rm1$x, rm1$y, rm1$sx, rm1$sy)
+isoplt(P)
+source("/Users/srmulcahy/Google Drive/dev/isochron/R/agema.R")
+agema(P$coef$slope)
+rm1 <- rm1[c(-9, 10),]
+rm1 <- rm1[c(-9, -10),]
+rm1
+P <- tanh(rm1$x, rm1$y, rm1$sx, rm1$sy)
+isoplt(P)
+rm1 <- read.table("/Users/srmulcahy/Google Drive/dev/isochron/test/rm1.csv", header = T, sep = ",")
+rm1 <- rm1[c(-8, -10),]
+P <- tanh(rm1$x, rm1$y, rm1$sx, rm1$sy)
+isoplt(P)
+agema(P$coef$slope)
+source("/Users/srmulcahy/Google Drive/dev/isochron/R/lsqf.R")
+Y <- lsqf(rm1$x, rm1$y, rm1$sx, rm1$sy)
+isoplt(Y)
+agema(Y$coef$slope)
+P
+Y
+R <- rlm(rm1$y~rm1$x, method="MM", a = 1, b = 1.634, c = 4, maxit = 50)
+isoplt(R)
+R
+P
+Y
+agema(R$coefficients[2])
+clear

@@ -1,0 +1,250 @@
+p2 + scale_x_reverse()
+p2 + scale_x_continuous(limits = c(300, 500))
+head(geochron)
+limits <- aes(xmax = geochron$time + geochron$sigma1, xmin = geochron$time - geochron$sigma1, ymax = geochron$temp + geochron$sigma2, ymin = geochron$temp - geochron$sigma2)
+p2 <-pl + geom_point(data=df2, aes(x = time, y = temp))+ geom_pointrange(limits)
+p2
+p2 <-pl + geom_point(data=geochron, aes(x = time, y = temp))
+p2
+limits <- aes(ymax = geochron$temp + geochron$sigma2, ymin = geochron$temp - geochron$sigma2)
+p2 <-pl + geom_point(data=geochron, aes(x = time, y = temp)) + geom_pointrange(limits)
+p2
+limits <- aes(ymax = temp + sigma2, ymin=temp - sigma2)
+p2 <-pl + geom_point(data=geochron, aes(x = time, y = temp)) + geom_errorbar(limits)
+p2
+limits <- aes(ymax = temp + geochron$sigma2, ymin=temp - geochron$sigma2)
+p2 <-pl + geom_point(data=geochron, aes(x = time, y = temp)) + geom_errorbar(limits)
+p2
+time <- as.numeric(geochron$time)
+sigma1 <- as.numeric(geochron$sigma1)
+temp <- as.numeric(geochron$temp)
+sigma2 <- as.numeric(geochron$sigma2)
+df <- data.frame(time, sigma1, temp, sigma2)
+p1 <- pl
+p1
+p2 <- p1 + geom_point(data=df, aes(x = time, y = temp))
+limits <-  aes(ymax = temp + sigma2, ymin = temp - sigma2)
+p2 <- p1 + geom_point(data=df, aes(x = time, y = temp)) + geom_errobar(limits)
+p2 <- p1 + geom_point(data=df, aes(x = time, y = temp)) + geom_errorbar(limits)
+p2
+length(temp)
+length(sigma2)
+p1 <- ggplot(df, aes(x = time, y = temp)) + geom_point() + geom_errorbar(limits)
+p1
+ylimits <-  aes(ymax = temp + sigma2, ymin = temp - sigma2)
+xlimits <-  aes(xmax = time + sigma1, xmin = timep - sigma1)
+p1 <- ggplot(df, aes(x = time, y = temp)) + geom_point() + geom_errorbar(ylimits) + geom_errorbarh(xlimits)
+p1
+xlimits <-  aes(xmax = time + sigma1, xmin = time - sigma1)
+p1 <- ggplot(df, aes(x = time, y = temp)) + geom_point() + geom_errorbar(ylimits) + geom_errorbarh(xlimits)
+p
+p1
+df2 <- data.frame(Tc1, 465-my)
+p1 + geom_line(df2, aes(x = X465...my, y = , Tc1))
+p1 + geom_line(data = df2, aes(x = X465...my, y = , Tc1))
+p1 + geom_line(data = df2, aes(x = X465...my, y = , Tc1)) + scale_x_continuous(limits = c(500, 300))
+p1 + geom_line(data = df2, aes(x = X465...my, y = , Tc1)) + scale_x_continuous(limits = c(300, 500))
+p1 + geom_line(data = df2, aes(x = X465...my, y = , Tc1)) + scale_x_continuous(limits = c(300, 500)) + theme_bw()
+source("/Users/srmulcahy/Documents/Blog/21bends/gps analysis/functions.R")
+rh <- import.tcx("~/Desktop/Hesjedel_PV_S4.tcx")
+head(rh)
+source("/Users/srmulcahy/Documents/Blog/21bends/gps analysis/formatt.R")
+head(df.rh)
+average.power.watts(lat, lon, vel, alt, rider.weight = 72, bike.weight = 6.8, temp = 11)
+average.power.watts(df.rh$lat, df.rh$lon, df.rh$vel, df.rh$alt, rider.weight = 72, bike.weight = 6.8, temp = 11)
+average.power.watts(df.rh$lat, df.rh$lon, df.rh$vel, df.rh$alt, rider.weight = 72, bike.weight = 6.8, temp = 11, wind.velocity = 0, wind.azimuth = 360)
+source("/Users/srmulcahy/Documents/Blog/21bends/gps analysis/functions.R")
+average.power.watts(df.rh$lat, df.rh$lon, df.rh$vel, df.rh$alt, rider.weight = 72, bike.weight = 6.8, temp = 11)
+ra <- rider.azimuth(lat, lon)
+source("/Users/srmulcahy/Documents/Blog/21bends/gps analysis/functions.R")
+average.power.watts(df.rh$lat, df.rh$lon, df.rh$vel, df.rh$alt, rider.weight = 72, bike.weight = 6.8, temp = 11)
+source("/Users/srmulcahy/Documents/Blog/21bends/gps analysis/functions.R")
+ra <- rider.azimuth(lat, lon)
+rider.azimuth(lat, lon)
+source("/Users/srmulcahy/Documents/Blog/21bends/gps analysis/functions.R")
+df.rh
+is.na(df.rh)
+df.rh[complete.cases(df.rh),]
+df.rh <- df.rh[complete.cases(df.rh),]
+source("/Users/srmulcahy/Documents/Blog/21bends/gps analysis/formatt.R")
+average.power.watts(df.rh$lat, df.rh$lon, df.rh$vel, df.rh$alt, rider.weight = 72, bike.weight = 6.8, temp = 11)
+average.power.watts(df.rh$lat, df.rh$lon, df.rh$vel, df.rh$alt, rider.weight = 72, bike.weight = 6.8, temp = 11, wind.velocity = -10, wind.azimuth = 270)
+average.power.watts(df.rh$lat, df.rh$lon, df.rh$vel, df.rh$alt, rider.weight = 72, bike.weight = 6.8, temp = 11, wind.velocity = 10, wind.azimuth = 270)
+average.power.watts(df.rh$lat, df.rh$lon, df.rh$vel, df.rh$alt, rider.weight = 72, bike.weight = 6.8, temp = 11, wind.velocity = 100, wind.azimuth = 270)
+average.power.watts(df.rh$lat, df.rh$lon, df.rh$vel, df.rh$alt, rider.weight = 72, bike.weight = 6.8, temp = 11, wind.velocity = 100, wind.azimuth = 90)
+average.power.watts(df.rh$lat, df.rh$lon, df.rh$vel, df.rh$alt, rider.weight = 72, bike.weight = 6.8, temp = 25, wind.velocity = 100, wind.azimuth = 90)
+source("/Users/srmulcahy/Documents/Blog/21bends/gps analysis/functions.R")
+average.power.watts(df.rh$lat, df.rh$lon, df.rh$vel, df.rh$alt)
+source("/Users/srmulcahy/Documents/Blog/21bends/gps analysis/functions.R")
+average.power.watts(df.rh$lat, df.rh$lon, df.rh$vel, df.rh$alt)
+source("/Users/srmulcahy/Documents/Blog/21bends/gps analysis/functions.R")
+average.power.watts(df.rh$lat, df.rh$lon, df.rh$vel, df.rh$alt)
+source("/Users/srmulcahy/Documents/Blog/21bends/gps analysis/functions.R")
+average.power.watts(df.rh$lat, df.rh$lon, df.rh$vel, df.rh$alt)
+source("/Users/srmulcahy/Documents/Blog/21bends/gps analysis/functions.R")
+rh <- import.tcx("~/Desktop/Stetina_PV_S1.tcx.html")
+rh <- import.tcx("~/Downloads/activity_164748976.tcx")
+source("/Users/srmulcahy/Documents/Blog/21bends/gps analysis/formatt.R")
+average.power.watts(df.rh$lat, df.rh$lon, df.rh$vel, df.rh$alt)
+source("/Users/srmulcahy/Documents/Blog/21bends/gps analysis/formatt.R")
+average.power.watts(df.rh$lat, df.rh$lon, df.rh$vel, df.rh$alt)
+p <- power.watts(df.rh$lat, df.rh$lon, df.rh$vel, df.rh$alt, rider.weight =  63.5, temp = 14.6)
+plot(df.rh$dist, p)
+plot(df.rh$dist, p, type = "l")
+source("/Users/srmulcahy/Documents/Blog/21bends/gps analysis/formatt.R")
+p <- power.watts(df.rh$lat, df.rh$lon, df.rh$vel, df.rh$alt, rider.weight =  63.5, temp = 14.6)
+source("/Users/srmulcahy/Documents/Blog/21bends/gps analysis/functions.R")
+average.power.watts(df.rh$lat, df.rh$lon, df.rh$vel, df.rh$alt)
+p <- power.watts(df.rh$lat, df.rh$lon, df.rh$vel, df.rh$alt, rider.weight =  63.5, temp = 14.6)
+plot(df.rh$dist, p, type = "l")
+sm <- smooth.spline(p)
+lines(sm, col = "red")
+rh <- import.tcx("~/Desktop/Hesjedel_PV_S4.tcx")
+source("/Users/srmulcahy/Documents/Blog/21bends/gps analysis/formatt.R")
+source("/Users/srmulcahy/Documents/Blog/21bends/gps analysis/functions.R")
+average.power.watts(df.rh$lat, df.rh$lon, df.rh$vel, df.rh$alt, rider.weight =  72, temp = 10.7)
+rh <- import.tcx("~/Downloads/activity_115668380.tcx")
+source("/Users/srmulcahy/Documents/Blog/21bends/gps analysis/formatt.R")
+source("/Users/srmulcahy/Documents/Blog/21bends/gps analysis/functions.R")
+average.power.watts(df.rh$lat, df.rh$lon, df.rh$vel, df.rh$alt, rider.weight =  63, temp = 31.3)
+p <- power.watts(df.rh$lat, df.rh$lon, df.rh$vel, df.rh$alt, rider.weight =  63, temp = 31.3)
+plot(df.rh$dist, p, type = "l")
+head(rh)
+rh <- import.tcx("~/Downloads/activity_164748010.tcx")
+source("/Users/srmulcahy/Documents/Blog/21bends/gps analysis/formatt.R")
+source("/Users/srmulcahy/Documents/Blog/21bends/gps analysis/functions.R")
+average.power.watts(df.rh$lat, df.rh$lon, df.rh$vel, df.rh$alt, rider.weight =  58.5, temp = 21.6)
+average.power.watts(df.rh$lat, df.rh$lon, df.rh$vel, df.rh$alt, rider.weight =  58.5, temp = 26)
+source("/Users/srmulcahy/Documents/Blog/21bends/gps analysis/stack.R")
+p
+rh <- import.tcx("~/Downloads/activity_164748239.tcx")
+source("/Users/srmulcahy/Documents/Blog/21bends/gps analysis/formatt.R")
+average.power.watts(df.rh$lat, df.rh$lon, df.rh$vel, df.rh$alt, rider.weight =  58.5, temp = 10)
+average.power.watts(df.rh$lat, df.rh$lon, df.rh$vel, df.rh$alt, rider.weight =  58.5, temp = 16)
+rh <- import.tcx("~/Downloads/activity_166727115.tcx")
+source("/Users/srmulcahy/Documents/Blog/21bends/gps analysis/formatt.R")
+source("/Users/srmulcahy/Documents/Blog/21bends/gps analysis/functions.R")
+average.power.watts(df.rh$lat, df.rh$lon, df.rh$vel, df.rh$alt, rider.weight =  58.5, temp = 12)
+df <- read.table("~/Desktop/power.csv")
+head(df)
+df <- read.table("~/Desktop/power.csv", header = T, sep=",")
+require(ggplot)
+require(ggplot2)
+p <- ggplot(aes,(meas, calc)) + geom_point()
+p <- ggplot(df, aes(meas, calc)) + geom_point()
+p
+p <- ggplot(df, aes(Meas, Calc)) + geom_point()
+p
+p <- ggplot(df, aes(Meas, Calc)) + geom_point() + geom_smooth(method="lm")
+p
+p <- ggplot(df, aes(Meas, Calc)) + geom_point(pch = 21) + geom_smooth(method="lm") + theme_bw()
+p
+p <- ggplot(df, aes(Meas, Calc)) + geom_point(pch = 19) + geom_smooth(method="lm") + theme_bw()
+p
+quartz(width = 7, height = 5)
+p
+p <- ggplot(df, aes(Meas, Calc)) + geom_point(pch = 19, colour = "blue") + geom_smooth(method="lm") + theme_bw()
+p
+p <- ggplot(df, aes(Meas, Calc)) + geom_smooth(method="lm") + geom_point(pch = 19, colour = "blue") + theme_bw()
+p
+p <- ggplot(df, aes(Meas, Calc)) + geom_smooth(method="lm", fill = "black") + geom_point(pch = 19, colour = "blue") + theme_bw()
+p
+p <- ggplot(df, aes(Meas, Calc)) + geom_smooth(method="lm", fill = "blue") + geom_point(pch = 19, colour = "blue") + theme_bw()
+p
+p <- ggplot(df, aes(Meas, Calc)) + geom_smooth(method="lm", fill = "blue") + geom_point(pch = 19, colour = "light blue") + theme_bw()
+p
+p <- ggplot(df, aes(Meas, Calc)) + geom_smooth(method="lm", fill = "light blue") + geom_point(pch = 19, colour = "blue") + theme_bw()
+p
+p <- ggplot(df, aes(Meas, Calc)) + geom_smooth(method="lm", fill = "light blue", colour="darkblue") + geom_point(pch = 19, colour = "blue") + theme_bw()
+p
+p <- ggplot(df, aes(Meas, Calc)) + geom_smooth(method="lm", fill = "lightblue", colour="lightblue") + geom_point(pch = 19, colour = "blue") + theme_bw()
+p
+p <- ggplot(df, aes(Meas, Calc)) + geom_smooth(method="lm", fill = "lightblue", colour="blue") + geom_point(pch = 19, colour = "blue") + theme_bw()
+p
+p <- ggplot(df, aes(Meas, Calc)) + geom_smooth(method="lm", fill = "lightblue", colour="blue") + geom_point(pch = 19, colour = "periwinkle") + theme_bw()
+p
+p <- ggplot(df, aes(Meas, Calc)) + geom_smooth(method="lm", fill = "lightblue", colour="blue") + geom_point(pch = 19, colour = "9999FF") + theme_bw()
+p
+p <- ggplot(df, aes(Meas, Calc)) + geom_smooth(method="lm", fill = "lightblue", colour="blue") + geom_point(pch = 19, colour = "#9999FF") + theme_bw()
+p
+source("/Users/srmulcahy/Documents/Blog/21bends/gps analysis/functions.R")
+rh <- import.tcx("~/Downloads/activity_168557325 (1).tcx")
+head(rh)
+source("/Users/srmulcahy/Documents/Blog/21bends/gps analysis/formatt.R")
+average.power.watts(lat, lon, vel, alt, rider.weight = 64, bike.weight = 10.4, temp = 21.5)
+head(df.rh)
+df.rh
+source("/Users/srmulcahy/Documents/Blog/21bends/gps analysis/functions.R")
+average.power.watts(lat, lon, vel, alt, rider.weight = 64, bike.weight = 10.4, temp = 21.5)
+source("/Users/srmulcahy/Documents/Blog/21bends/gps analysis/functions.R")
+average.power.watts(lat, lon, vel, alt, rider.weight = 64, bike.weight = 10.4, temp = 21.5)
+source("/Users/srmulcahy/Documents/RScripts/isochron/R/isochron.r")
+sytem.time(replicate(500, P<-powell(x, y, sx/2, sy/2)))
+system.time(replicate(500, P<-powell(x, y, sx/2, sy/2)))
+source("/Users/srmulcahy/Documents/RScripts/isochron/R/isochron.r")
+system.time(replicate(500, P<-powell(x, y, sx/2, sy/2)))
+(0.028 - 0.037)/0.028
+(3.602 - 3.741)/3.741
+source("/Users/srmulcahy/Documents/RScripts/isochron/R/isochron.r")
+system.time(replicate(500, P<-powell(x, y, sx/2, sy/2)))
+source("/Users/srmulcahy/Documents/RScripts/isochron/R/isochron.r")
+system.time(replicate(500, P<-powell(x, y, sx/2, sy/2)))
+system.time(replicate(500, P<-powell(x, y, sx/2, sy/2)))
+system.time(replicate(500, P<-powell(x, y, sx/2, sy/2)))
+source("/Users/srmulcahy/Documents/RScripts/isochron/R/isochron.r")
+system.time(replicate(500, P<-powell(x, y, sx/2, sy/2)))
+source("/Users/srmulcahy/Documents/RScripts/isochron/R/isochron.r")
+system.time(replicate(500, P<-powell(x, y, sx/2, sy/2)))
+source("/Users/srmulcahy/Documents/RScripts/isochron/R/isochron.r")
+system.time(replicate(500, P<-powell(x, y, sx/2, sy/2)))
+P <-powell(x, y, sx/2, sy/2)
+system.time(ci <- powell.ci(P$df, P$coefficients$slope, N = 250))
+source("/Users/srmulcahy/Documents/RScripts/isochron/R/isochron.r")
+source("/Users/srmulcahy/Documents/RScripts/isochron/R/isochron.r")
+P <-powell(x, y, sx/2, sy/2)
+system.time(ci <- powell.ci(P$df, P$coefficients$slope, N = 250))
+source("/Users/srmulcahy/Documents/RScripts/isochron/R/isochron.r")
+P <-powell(x, y, sx/2, sy/2)
+system.time(ci <- powell.ci(P$df, P$coefficients$slope, N = 250))
+system.time(ci <- powell.ci(P$df, P$coefficients$slope, N = 250))
+W <- diag( 1 / sqrt({sy*sy} + {P$coefficients$slope*P$coefficients$slope * sx*sx}))
+crossprod(P$df$e, W %*%W)
+crossprod(P$df$e, {W %*%W})
+P
+source("/Users/srmulcahy/Documents/RScripts/isochron/R/isochron.r")
+P <-powell(x, y, sx/2, sy/2)
+P
+system.time(replicate(1000, 10^10))
+system.time(replicate(1000, 1010))
+system.time(replicate(1000, 10*10))
+system.time(replicate(1000, 10**2))
+system.time(replicate(1000, 10**2))
+system.time(replicate(1000, 10**2))
+system.time(replicate(1000, 10**2))
+system.time(replicate(100000, 10**2))
+system.time(replicate(100000, 10^2))
+system.time(replicate(100000, 10*10))
+D
+save(D, file = "pdp47.rdata")
+pdp47
+load(pdp47)
+load(".rdata")
+load("pdp47.rdata")
+pdp47
+g <- load("pdp47.rdata")
+f
+g
+unlist(g)
+as.dataframe(g)
+class(g)
+as.numeric(g)
+P
+save(P$df, file = "mydata.Rdata")
+P$df
+G <- data.frame(P$df)
+G
+save(G, file = "mydata.Rdata")
+load("mydata.Rdata")
+mydata
+G <- load("mydata.Rdata")
+G

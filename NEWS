@@ -1,0 +1,15 @@
+isochron 0.2.0
+----------------------------------------------------------------
+
+MINOR FEATURES
+
+* `tanhci`  Added `nmad` as input parameter to `tanhci`
+
+* `tanh`  Changed output `fit` results parameter name to `nmad` from `sfit`
+
+BUG FIXES
+
+* `tanhci`  Error: object 'P' not found (Fixes #1)
+
+
+
