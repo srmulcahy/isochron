@@ -1,10 +1,10 @@
 #' Plot a histogram of the bootstrap confidence interval data.
 #'
 #' This function plots a histogram of slopes generated from the function
-#'   \code{\link{tanhci}} which performs bootstrap resampling of residuals to
+#'   \code{\link{tnhci}} which performs bootstrap resampling of residuals to
 #'   generate a 95\% confidence interval on the slope.  T
 #'
-#' @param df Data frame of slope values from \code{\link{tanhci}}
+#' @param df Data frame of slope values from \code{\link{tnhci}}
 #' @return ggplot of the frequency as bins, and overlay of the expected Gaussian 
 #'   normal curve (dashed black line), and the confidence picture using the Epanechnikov 
 #'   density kernal (solid black line).
@@ -18,8 +18,8 @@
 #' @export
 #' @examples
 #' data(pdp133)
-#' P <- tanh(pdp133$x, pdp133$y, pdp133$sx, pdp133$sy)
-#' C <- tanhci(P$dat, P$coef$slope, n = 300)
+#' P <- tnh(pdp133$x, pdp133$y, pdp133$sx, pdp133$sy)
+#' C <- tnhci(P$dat, P$fit, P$coef$slope, n = 300)
 #' ciplt(C$slope)
 
 ciplt <- function(df){

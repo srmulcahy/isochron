@@ -24,7 +24,7 @@ library(isochron)
 Quick start
 -----------
 
-Classic least-squares (york) fitting of isochron data
+Classic least-squares fitting of isochron data (*e.g. York, 1969*)
 ```r
 data(pdp133)
 Y <- lsqf(pdp133$x, pdp133$y, pdp133$sx, pdp133$sy)
@@ -33,10 +33,10 @@ agema(Y$coef$slope, lambda = 1.867e-11)
 isoplt(Y)
 ```
 
-Robust fitting of isochron data
+Robust fitting of isochron data (*Powell et al., 2002*)
 ```r
 data(pdp133)
-T <- tanh(pdp133$x, pdp133$y, pdp133$sx, pdp133$sy)
+T <- tnh(pdp133$x, pdp133$y, pdp133$sx, pdp133$sy)
 T
 agema(T$coef$slope, lambda = 1.867e-11)
 isoplt(T)

@@ -2,12 +2,14 @@ isochron 0.2.0
 ----------------------------------------------------------------
 
 MINOR FEATURES
+* `tanh` and `tanhci` renamed to `tnh` and `tnhci` to prevent masking
 
 * `tanhci`  Added `nmad` as input parameter to `tanhci`
 
 * `tanh`  Changed output `fit` results parameter name to `nmad` from `sfit`
 
 BUG FIXES
+* `tanh` masked from project:base
 
 * `tanhci`  Error: object 'P' not found (Fixes #1)
 

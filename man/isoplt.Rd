@@ -7,7 +7,7 @@
 }
 \arguments{
   \item{df}{Data frame result from \code{\link{lsqf}} or
-  \code{\link{tanh}} regression}
+  \code{\link{tnh}} regression}
 
   \item{main}{Plot title}
 
@@ -21,12 +21,12 @@
 }
 \description{
   This function plots an isochron diagram from the results
-  of \code{\link{lsqf}} and \code{\link{tanh}} model
+  of \code{\link{lsqf}} and \code{\link{tnh}} model
   regressions.
 }
 \examples{
 data(russel)
-R <- tanh(russel$x, russel$y, russel$sx, russel$sy)
+R <- tnh(russel$x, russel$y, russel$sx, russel$sy)
 isoplt(R, main = "Russel, 1995", xlab = "206Pb/204Pb", ylab = "207Pb/204Pb")
 }
 \author{
