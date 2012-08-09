@@ -51,8 +51,8 @@ The difference in the two methods can be seen by plotting the data from *Russel,
 
 The resulting isochrons show the differences in weighting by the two routines.  With the tanh estimator, all points are given the same weight, with the exception of two outliers near the intercept, whose weights are greatly reduced.
 
-![york](http://github.com/srmulcahy/isochron/inst/img/raw/master/lsqf_russel.png)
-![powell](http://github.com/srmulcahy/isochron/inst/img/raw/master/tnhf_russel.png)
+![york](https://raw.github.com/srmulcahy/isochron/master/inst/img/lsqf_russel.png)
+![powell](https://raw.github.com/srmulcahy/isochron/master/inst/img/tnhf_russel.png)
 	
 References
 -----------
