@@ -2,9 +2,9 @@
 #'
 #' This function plots a histogram of slopes generated from the function
 #'   \code{\link{tnhc}} which performs bootstrap resampling of residuals to
-#'   generate a 95\% confidence interval on the slope.  T
+#'   generate a 95\% confidence interval on the slope.
 #'
-#' @param df data frame of slope values from \code{\link{tnhc}}
+#' @param df data.frame of slope values from \code{\link{tnhc}}
 #' @return ggplot of the frequency as bins, and overlay of the expected Gaussian 
 #'   normal curve (dashed black line), and the confidence picture using the Epanechnikov 
 #'   density kernal (solid black line).

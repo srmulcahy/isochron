@@ -3,12 +3,12 @@
 #' This function plots an isochron diagram from the results of  
 #'   \code{\link{lsqf}} and \code{\link{tnhf}} model regressions.
 #'
-#' @param df Data frame result from \code{\link{lsqf}} or \code{\link{tnhf}} regression
-#' @param main Plot title
+#' @param df data.frame result from \code{\link{lsqf}} or \code{\link{tnhf}} regression
+#' @param main plot title
 #' @param xlab x-axis label
 #' @param ylab y-axis label
 #' @return ggplot of isochron of x-y data and best fit line.  The function currently colors
-#'   each point according to weight.
+#'   each point according to weight, with brighter shades of blue for greater weights.
 #' @author Sean Mulcahy 
 #' @export
 #' @examples

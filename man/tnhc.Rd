@@ -5,19 +5,19 @@
   tnhc(df, b, nmad, n = 999)
 }
 \arguments{
-  \item{df}{Input data frame for results of
-  \code{\link{tnhf}} regression}
+  \item{df}{data.frame of results from \code{\link{tnhf}}
+  regression}
 
-  \item{b}{Slope of the \code{\link{tnhf}} regression
+  \item{b}{slope of the \code{\link{tnhf}} regression
   through the data}
 
   \item{nmad}{nMad of the \code{\link{tnhf}} regression
   through the data}
 
-  \item{n}{Number of times to resample}
+  \item{n}{number of times to resample}
 }
 \value{
-  A list format with bootstrap results for slope, nMad, and
+  list format with bootstrap results for slope, nMad, and
   the 95\% confidence interval of the slope.
 }
 \description{

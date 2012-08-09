@@ -5,16 +5,13 @@
   ehf(a, age)
 }
 \arguments{
-  \item{a}{Intercept value taken from the intercept of the
-  \code{\link{lsqf}} or \code{\link{tnhf}} model
-  regressions}
+  \item{a}{intercept of the isochron}
 
-  \item{age}{Age in Ma determined from the slope of the
-  \code{\link{lsqf}} or \code{\link{tnhf}} model
-  regression}
+  \item{age}{age in Ma determined from the slope of the
+  isochron}
 }
 \value{
-  Numeric value of epsilon Hf.
+  numeric value of epsilon Hf.
 }
 \description{
   This function calcalates epsilon Hf values from the

@@ -5,11 +5,9 @@
 #'   model regression.  Values for \eqn{^{176}}Hf/\eqn{^{177}}Hf = 0.282785 and \eqn{^{176}}Lu/\eqn{^{177}}Hf = 0.0336 
 #'   for CHUR (chondrite uniform reservoir) from Bouvier et al., 2008.
 #'
-#' @param a Intercept value taken from the intercept of the \code{\link{lsqf}} 
-#'   or \code{\link{tnhf}} model regressions
-#' @param age Age in Ma determined from the slope of the \code{\link{lsqf}} or 
-#'   \code{\link{tnhf}} model regression
-#' @return Numeric value of epsilon Hf.
+#' @param a intercept of the isochron
+#' @param age age in Ma determined from the slope of the isochron
+#' @return numeric value of epsilon Hf.
 #' @references Bouvier, A., Vervoort, J.D., and Patchett, P.J., 2008, The Lu-Hf 
 #'   and Sm-Nd isotopic composition of CHUR: Constraints from unequilibrated 
 #'   chondrites and implications for the bulk composition of terrestrial planets,

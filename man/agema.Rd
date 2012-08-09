@@ -5,15 +5,14 @@
   agema(b, lambda = 1.867e-11)
 }
 \arguments{
-  \item{b}{Slope from the \code{\link{lsqf}} or
-  \code{\link{tnhf}} model regression}
+  \item{b}{slope of the isochron}
 
-  \item{lambda}{Decay constant for the isotopic system.
+  \item{lambda}{decay constant for the isotopic system.
   The default is the the \eqn{^{176}}Lu decay constant of
   Soderlund et al., 2004}
 }
 \value{
-  Numeric value for the age in million years.
+  numeric value for the age in million years.
 }
 \description{
   This function computes the age in Ma from the slope of an

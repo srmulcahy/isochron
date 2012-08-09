@@ -5,13 +5,13 @@
   tnhf(x, y, sx, sy, p = 1.634, r = 4)
 }
 \arguments{
-  \item{x}{Vector of measured x-axis values.}
+  \item{x}{vector of measured x-axis values.}
 
-  \item{y}{Vector of measured y-axis values.}
+  \item{y}{vector of measured y-axis values.}
 
-  \item{sx}{Vector of absolute uncertainty in x.}
+  \item{sx}{vector of absolute uncertainty in x.}
 
-  \item{sy}{Vector of absolute uncertainty in y.}
+  \item{sy}{vector of absolute uncertainty in y.}
 
   \item{p}{w-estimator parameter. Default values are set as
   in Powell et al., 2002.  set p = 2.5 for hard rejection}
@@ -20,7 +20,7 @@
   in Powell et al., 2002.  set r = 0 for hard rejection}
 }
 \value{
-  A list format of regression coefficients, fit statistics,
+  list format of regression coefficients, fit statistics,
   covariance matrix, and input dataset with residuals and
   calculated weights.
 }

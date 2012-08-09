@@ -7,11 +7,11 @@
 #'   can be used to generate histograms for the simulated data set with 
 #'   \code{\link{ciplt}}
 #' 
-#' @param df Input data frame for results of \code{\link{tnhf}} regression 
-#' @param b Slope of the \code{\link{tnhf}} regression through the data
+#' @param df data.frame of results from \code{\link{tnhf}} regression 
+#' @param b slope of the \code{\link{tnhf}} regression through the data
 #' @param nmad nMad of the \code{\link{tnhf}} regression through the data
-#' @param n Number of times to resample
-#' @return A list format with bootstrap results for slope, nMad, and the 95\%
+#' @param n number of times to resample
+#' @return list format with bootstrap results for slope, nMad, and the 95\%
 #'    confidence interval of the slope.
 #'
 #' @references Powell, R., Hergt, J., and Woodhead, J., 2002, Improving isochron 

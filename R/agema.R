@@ -4,11 +4,10 @@
 #'   calculated by the \code{\link{lsqf}} and \code{\link{tnhf}} model 
 #'   regressions and for a given decay constant.
 #'
-#' @param b Slope from the \code{\link{lsqf}} or \code{\link{tnhf}}
-#'   model regression
-#' @param lambda Decay constant for the isotopic system.  The default is the
+#' @param b slope of the isochron
+#' @param lambda decay constant for the isotopic system.  The default is the
 #'   the \eqn{^{176}}Lu decay constant of Soderlund et al., 2004
-#' @return Numeric value for the age in million years.
+#' @return numeric value for the age in million years.
 #' 
 #' @references Soderlund, U., Patchett, P.J., Vervoort, J.D., and Isachsen, C.E., 
 #'   2004, The \eqn{^{176}}Lu decay constant determined by Lu-Hf and U-Pb isotope 

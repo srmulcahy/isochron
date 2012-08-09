@@ -4,11 +4,11 @@
 #'   the approach of York, 1969 and Wendt & Carl, 1991 and summarized by Powell et 
 #'   al., 2002.  The input data are the measured values an absolute uncertainties.
 #' 
-#' @param x Vector of measured x-axis values.
-#' @param y Vector of measured y-axis values.
-#' @param sx Vector of absolute uncertainty in x.
-#' @param sy Vector of absolute uncertainty in y.
-#' @return A list format of regression coefficients, fit statistics, covariance matrix, 
+#' @param x vector of measured x-axis values.
+#' @param y vector of measured y-axis values.
+#' @param sx vector of absolute uncertainty in x.
+#' @param sy vector of absolute uncertainty in y.
+#' @return list format of regression coefficients, fit statistics, covariance matrix, 
 #'   and input dataset with residuals and calculated weights.
 #' 
 #' @references York, D., 1969 Least squares fitting of a straight line with 

@@ -6,10 +6,10 @@
     ylab = "y-value")
 }
 \arguments{
-  \item{df}{Data frame result from \code{\link{lsqf}} or
+  \item{df}{data.frame result from \code{\link{lsqf}} or
   \code{\link{tnhf}} regression}
 
-  \item{main}{Plot title}
+  \item{main}{plot title}
 
   \item{xlab}{x-axis label}
 
@@ -17,7 +17,8 @@
 }
 \value{
   ggplot of isochron of x-y data and best fit line.  The
-  function currently colors each point according to weight.
+  function currently colors each point according to weight,
+  with brighter shades of blue for greater weights.
 }
 \description{
   This function plots an isochron diagram from the results

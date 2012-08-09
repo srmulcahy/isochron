@@ -5,7 +5,7 @@
   ciplt(df)
 }
 \arguments{
-  \item{df}{data frame of slope values from
+  \item{df}{data.frame of slope values from
   \code{\link{tnhc}}}
 }
 \value{
@@ -18,7 +18,7 @@
   This function plots a histogram of slopes generated from
   the function \code{\link{tnhc}} which performs bootstrap
   resampling of residuals to generate a 95\% confidence
-  interval on the slope.  T
+  interval on the slope.
 }
 \examples{
 data(pdp133)

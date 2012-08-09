@@ -6,15 +6,15 @@
 #'   in the calculation they are included for a complete rendering of the output 
 #'   for later use in tables or publicaitons.
 #' 
-#' @param x Vector of measured x-axis values.
-#' @param y Vector of measured y-axis values.
-#' @param sx Vector of absolute uncertainty in x.
-#' @param sy Vector of absolute uncertainty in y.
+#' @param x vector of measured x-axis values.
+#' @param y vector of measured y-axis values.
+#' @param sx vector of absolute uncertainty in x.
+#' @param sy vector of absolute uncertainty in y.
 #' @param p w-estimator parameter. Default values are set as in Powell et al., 2002.
 #'   set p = 2.5 for hard rejection
 #' @param r w-estimator parameter. Default values are set as in Powell et al., 2002.
 #'   set r = 0 for hard rejection
-#' @return A list format of regression coefficients, fit statistics, covariance matrix, 
+#' @return list format of regression coefficients, fit statistics, covariance matrix, 
 #'   and input dataset with residuals and calculated weights.
 #'
 #' @references Powell, R., Hergt, J., and Woodhead, J., 2002, Improving isochron 
