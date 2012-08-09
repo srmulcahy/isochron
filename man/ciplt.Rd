@@ -5,8 +5,8 @@
   ciplt(df)
 }
 \arguments{
-  \item{df}{Data frame of slope values from
-  \code{\link{tnhci}}}
+  \item{df}{data frame of slope values from
+  \code{\link{tnhc}}}
 }
 \value{
   ggplot of the frequency as bins, and overlay of the
@@ -16,14 +16,14 @@
 }
 \description{
   This function plots a histogram of slopes generated from
-  the function \code{\link{tnhci}} which performs bootstrap
+  the function \code{\link{tnhc}} which performs bootstrap
   resampling of residuals to generate a 95\% confidence
   interval on the slope.  T
 }
 \examples{
 data(pdp133)
-P <- tnh(pdp133$x, pdp133$y, pdp133$sx, pdp133$sy)
-C <- tnhci(P$dat, P$fit, P$coef$slope, n = 300)
+P <- tnhf(pdp133$x, pdp133$y, pdp133$sx, pdp133$sy)
+C <- tnhc(P$dat, P$fit, P$coef$slope, n = 300)
 ciplt(C$slope)
 }
 \author{

@@ -1,10 +1,10 @@
 #' Calculate an age from the slope of an isochron.
 #'
 #' This function computes the age in Ma from the slope of an isochron
-#'   calculated by the \code{\link{lsqf}} and \code{\link{tnh}} model 
+#'   calculated by the \code{\link{lsqf}} and \code{\link{tnhf}} model 
 #'   regressions and for a given decay constant.
 #'
-#' @param b Slope from the \code{\link{lsqf}} or \code{\link{tnh}}
+#' @param b Slope from the \code{\link{lsqf}} or \code{\link{tnhf}}
 #'   model regression
 #' @param lambda Decay constant for the isotopic system.  The default is the
 #'   the \eqn{^{176}}Lu decay constant of Soderlund et al., 2004

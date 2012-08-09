@@ -6,11 +6,12 @@
 }
 \arguments{
   \item{a}{Intercept value taken from the intercept of the
-  \code{\link{lsqf}} or \code{\link{tnh}} model
+  \code{\link{lsqf}} or \code{\link{tnhf}} model
   regressions}
 
   \item{age}{Age in Ma determined from the slope of the
-  \code{\link{lsqf}} or \code{\link{tnh}} model regression}
+  \code{\link{lsqf}} or \code{\link{tnhf}} model
+  regression}
 }
 \value{
   Numeric value of epsilon Hf.
@@ -18,10 +19,11 @@
 \description{
   This function calcalates epsilon Hf values from the
   intercept and age previously dertermined from
-  \code{\link{lsqf}} or \code{\link{tnh}} model regression.
-  Values for \eqn{^{176}}Hf/\eqn{^{177}}Hf = 0.282785 and
-  \eqn{^{176}}Lu/\eqn{^{177}}Hf = 0.0336 for CHUR
-  (chondrite uniform reservoir) from Bouvier et al., 2008.
+  \code{\link{lsqf}} or \code{\link{tnhf}} model
+  regression.  Values for \eqn{^{176}}Hf/\eqn{^{177}}Hf =
+  0.282785 and \eqn{^{176}}Lu/\eqn{^{177}}Hf = 0.0336 for
+  CHUR (chondrite uniform reservoir) from Bouvier et al.,
+  2008.
 }
 \examples{
 data(pdp133)

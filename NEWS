@@ -2,7 +2,7 @@ isochron 0.2.0
 ----------------------------------------------------------------
 
 MINOR FEATURES
-* `tanh` and `tanhci` renamed to `tnh` and `tnhci` to prevent masking
+* `tanh` and `tanhci` renamed to `tnhf` and `tnhc` to prevent masking
 
 * `tanhci`  Added `nmad` as input parameter to `tanhci`
 

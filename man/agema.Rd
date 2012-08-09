@@ -6,7 +6,7 @@
 }
 \arguments{
   \item{b}{Slope from the \code{\link{lsqf}} or
-  \code{\link{tnh}} model regression}
+  \code{\link{tnhf}} model regression}
 
   \item{lambda}{Decay constant for the isotopic system.
   The default is the the \eqn{^{176}}Lu decay constant of
@@ -18,8 +18,8 @@
 \description{
   This function computes the age in Ma from the slope of an
   isochron calculated by the \code{\link{lsqf}} and
-  \code{\link{tnh}} model regressions and for a given decay
-  constant.
+  \code{\link{tnhf}} model regressions and for a given
+  decay constant.
 }
 \examples{
 data(pdp133)

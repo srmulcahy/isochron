@@ -26,5 +26,5 @@ Collate:
     'isoplt.R'
     'lsqf.R'
     'isochron.R'
-    'tnh.R'
-    'tnhci.R'
+    'tnhf.R'
+    'tnhc.R'
