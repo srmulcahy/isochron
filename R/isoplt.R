@@ -19,7 +19,7 @@ isoplt <- function(df, main = "Title", xlab = "x-value", ylab = "y-value"){
 	
 	require(ggplot2)
 	
-	p <- ggplot(df$dat, aes(x, y, colour = "black")) + geom_point() + 
+	p <- ggplot(df$dat, aes(x, y)) + geom_point(colour = "black") + 
 		geom_errorbar(aes(ymin = y - sy, ymax = y + sy), width = 0) +
   	geom_errorbarh(aes(xmin = x - sx, xmax = x + sx), height = 0) +
 	  geom_abline(intercept = df$coef$intercept, slope = df$coef$slope) +

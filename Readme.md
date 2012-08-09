@@ -13,31 +13,36 @@ uncertainty, and fit statistics from the measured data.
 Installation 
 ------------
 
-Install directly from Github using the [devtools package](https://github.com/hadley/devtools)
+`isochron` is still under active development, so is not yet available from CRAN.
+You can install the latest development version from github using the
+[devtools package](https://github.com/hadley/devtools).
 
-```r
-library(devtools)
-install_github("isochron", "srmulcahy")
-library(isochron)
-````
+	library(devtools)
+	install_github("isochron", "srmulcahy")
+	library(isochron)
+
 
 Quick start
 -----------
 
 Classic least-squares fitting of isochron data (*e.g. York, 1969*)
-```r
-data(pdp133)
-Y <- lsqf(pdp133$x, pdp133$y, pdp133$sx, pdp133$sy)
-Y
-agema(Y$coef$slope, lambda = 1.867e-11)
-isoplt(Y)
-```
+
+	data(pdp133)
+	Y <- lsqf(pdp133$x, pdp133$y, pdp133$sx, pdp133$sy)
+	Y
+	agema(Y$coef$slope, lambda = 1.867e-11)
+	isoplt(Y, main = "PdP13-3", xlab = "176Lu/177Hf", ylab = "176Hf/177Hf")
 
 Robust fitting of isochron data (*Powell et al., 2002*)
-```r
-data(pdp133)
-T <- tnh(pdp133$x, pdp133$y, pdp133$sx, pdp133$sy)
-T
-agema(T$coef$slope, lambda = 1.867e-11)
-isoplt(T)
-```
+
+	data(pdp133)
+	T <- tnh(pdp133$x, pdp133$y, pdp133$sx, pdp133$sy)
+	T
+	agema(T$coef$slope, lambda = 1.867e-11)
+	isoplt(T, main = "PdP13-3", xlab = "176Lu/177Hf", ylab = "176Hf/177Hf")
+
+
+References
+-----------
+1. York, D., 1969, Least squares fitting of a straight line with coordinated errors: *Earth and Planetary Science Letters*, v. 5, p. 320–324.
+2. Powell, R., Hergt, J., and Woodhead, J., 2002, Improving isochron calculations with robust statistics and the bootstrap: *Chemical Geology*, v. 185, p. 191–204.
