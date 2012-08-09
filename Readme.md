@@ -49,13 +49,15 @@ The difference in the two methods can be seen by plotting the data from *Russel,
 	P <- tnhf(russel$x, russel$y, russel$sx, russel$sy)
 	isoplt(P)
 
-The resulting isochrons show the differences in weighting by the two routines.  With the tanh estimator, all points are given the same weight, with the exception of two outliers near the intercept, whose weights are greatly reduced.
+The resulting isochrons show the differences in weighting by the two routines.  With the tanh estimator, all points are given the same weight, with the exception of two outliers near the intercept, whose weights are greatly reduced. (Brighter shades of blue correspond to greater weights and vice versa).
 
 ![york](https://raw.github.com/srmulcahy/isochron/master/inst/img/lsqf_russel.png)
 ![powell](https://raw.github.com/srmulcahy/isochron/master/inst/img/tnhf_russel.png)
+
 	
 References
 -----------
-1. York, D., 1969, Least squares fitting of a straight line with coordinated errors: *Earth and Planetary Science Letters*, v. 5, p. 320–324. ([http](http://www.sciencedirect.com/science/article/pii/S0012821X68800597)
+
+1. Powell, R., Hergt, J., and Woodhead, J., 2002, Improving isochron calculations with robust statistics and the bootstrap: *Chemical Geology*, v. 185, p. 191–204. ([http](http://www.sciencedirect.com/science/article/pii/S000925410100403X))
 2. Russell, J., 1995, Direct Pb/Pb dating of Silurian macrofossils from Gotland, Sweden: *Geological Society, London, Special Publications*, v. 89, no. 1, p. 175–200. ([http](http://sp.lyellcollection.org/content/89/1/175.abstract))
-3. Powell, R., Hergt, J., and Woodhead, J., 2002, Improving isochron calculations with robust statistics and the bootstrap: *Chemical Geology*, v. 185, p. 191–204. ([http](http://www.sciencedirect.com/science/article/pii/S000925410100403X))
+3. York, D., 1969, Least squares fitting of a straight line with coordinated errors: *Earth and Planetary Science Letters*, v. 5, p. 320–324. ([http](http://www.sciencedirect.com/science/article/pii/S0012821X68800597)
