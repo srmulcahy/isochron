@@ -24,7 +24,8 @@ isoplt <- function(df, main = "Title", xlab = "x-value", ylab = "y-value"){
   		geom_errorbarh(aes(xmin = x - sx, xmax = x + sx), height = 0) +
 	  	geom_abline(intercept = df$coef$intercept, slope = df$coef$slope) +
 	  	theme_bw() +
-		labs(x = xlab, y = ylab, title = main, legend.position = "none") 
+		labs(x = xlab, y = ylab, title = main) +
+		theme(legend.position = "none") 
 	
 	return(p)
 }
