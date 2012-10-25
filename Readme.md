@@ -59,5 +59,5 @@ References
 -----------
 
 1. Powell, R., Hergt, J., and Woodhead, J., 2002, Improving isochron calculations with robust statistics and the bootstrap: *Chemical Geology*, v. 185, p. 191–204. ([http](http://www.sciencedirect.com/science/article/pii/S000925410100403X))
-2. Russell, J., 1995, Direct Pb/Pb dating of Silurian macrofossils from Gotland, Sweden: *Geological Society, London, Special Publications*, v. 89, no. 1, p. 175–200. ([http](http://sp.lyellcollection.org/content/89/1/175.abstract))
-3. York, D., 1969, Least squares fitting of a straight line with coordinated errors: *Earth and Planetary Science Letters*, v. 5, p. 320–324. ([http](http://www.sciencedirect.com/science/article/pii/S0012821X68800597)
+2. Russell, J., 1995, Direct Pb/Pb dating of Silurian macrofossils from Gotland, Sweden: *Geological Society, London, Special Publications*, v. 89, p. 175–200. ([http](http://sp.lyellcollection.org/content/89/1/175.abstract))
+3. York, D., 1969, Least squares fitting of a straight line with coordinated errors: *Earth and Planetary Science Letters*, v. 5, p. 320–324. ([http](http://www.sciencedirect.com/science/article/pii/S0012821X68800597))

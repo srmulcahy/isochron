@@ -27,10 +27,10 @@
 tnhc <- function(df, b, nmad, n = 999){
 	require(plyr)
 	lx <- length(df$e)
-	
+
 	# generate n samples of residuals e with replacement
 	es <- replicate(n, sample(df$e, length(df$e), replace = TRUE))
-	
+
 	# calculate the slope for each resample
 	ys <- df$y + es
 	ls <- split(ys, col(ys))
@@ -39,7 +39,7 @@ tnhc <- function(df, b, nmad, n = 999){
 	}
 	ts <- llply(ls, f, .progress = "text")
 	theta <- unlist(ts)
-	
+
 	# calculate  the nMad for each resample
 	e <- split(es, col(es))
 	f2 <- function(e){
@@ -47,7 +47,7 @@ tnhc <- function(df, b, nmad, n = 999){
 	}
 	s <- llply(e, f2)
 	ss <- unlist(s)
-	
+
 	# calculate the confidence interval on the slope
 	psi <- sqrt(lx) * {theta - b} / ss
 	q <- quantile(psi, probs = c(0.025, 0.975))

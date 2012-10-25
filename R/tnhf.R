@@ -28,19 +28,19 @@
 #' data(russel)
 #' P <- tnhf(russel$x, russel$y, russel$sx, russel$sy)
 tnhf <- function(x, y, sx, sy, p = 1.634, r = 4){
-	
+
 	require(MASS)
-	
+
 	# initial least median squares estimation (MASS)
 	fit <- lqs(y ~ x, method = "lms")
 	theta <- fit$coefficients
-	
+
 	# constants
 	X <- cbind(1, x)
 	lx <- length(x)
 	tol <- 1e-9	# tolerance
 	d <- tol
-	
+
 	# tanh regression
 	while (d >= tol){
 		b2 <- theta[2]
@@ -54,7 +54,7 @@ tnhf <- function(x, y, sx, sy, p = 1.634, r = 4){
 	}
 	Vo <- solve(crossprod(X, {W %*% W} %*% X))
 	sfit <- sqrt((crossprod(e, W %*% W) %*% e)/(lx - 2))
-	
+
 	# output results 
 	th <- data.frame(intercept = theta[1], slope = theta[2])
 	ft <- data.frame(nmad = s)
