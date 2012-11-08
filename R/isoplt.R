@@ -7,25 +7,22 @@
 #' @param main plot title
 #' @param xlab x-axis label
 #' @param ylab y-axis label
-#' @return ggplot of isochron of x-y data and best fit line.  The function currently colors
-#'   each point according to weight, with brighter shades of blue for greater weights.
+#' @return ggplot of isochron of x-y data and best fit line
 #' @author Sean Mulcahy 
 #' @export
 #' @examples
 #' data(russel)
 #' R <- tnhf(russel$x, russel$y, russel$sx, russel$sy)
 #' isoplt(R, main = "Russel, 1995", xlab = "206Pb/204Pb", ylab = "207Pb/204Pb")
-isoplt <- function(df, main = "Title", xlab = "x-value", ylab = "y-value"){
-	
+isoplt <- function(df, main = "Isochron", xlab = "x-value", ylab = "y-value"){
+  
 	require(ggplot2)
 	
-	p <- ggplot(df$dat, aes(x, y, colour = w)) + geom_point() + 
+	p <- ggplot(df$dat, aes(x, y)) + geom_point() + 
 		geom_errorbar(aes(ymin = y - sy, ymax = y + sy), width = 0) +
   		geom_errorbarh(aes(xmin = x - sx, xmax = x + sx), height = 0) +
 	  	geom_abline(intercept = df$coef$intercept, slope = df$coef$slope) +
-	  	theme_bw() +
-		labs(x = xlab, y = ylab, title = main) +
-		theme(legend.position = "none") 
+		labs(x = xlab, y = ylab, title = main) 
 	
 	return(p)
 }
