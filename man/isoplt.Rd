@@ -2,7 +2,7 @@
 \alias{isoplt}
 \title{Plot an isochron diagram.}
 \usage{
-  isoplt(df, main = "Title", xlab = "x-value",
+  isoplt(df, main = "Isochron", xlab = "x-value",
     ylab = "y-value")
 }
 \arguments{
@@ -16,9 +16,7 @@
   \item{ylab}{y-axis label}
 }
 \value{
-  ggplot of isochron of x-y data and best fit line.  The
-  function currently colors each point according to weight,
-  with brighter shades of blue for greater weights.
+  ggplot of isochron of x-y data and best fit line
 }
 \description{
   This function plots an isochron diagram from the results

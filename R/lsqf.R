@@ -50,14 +50,20 @@ lsqf <- function(x, y, sx, sy){
 		d <- abs(theta[2] - b2)
 	}
 	
+	# residuals and variance-covariance matrix
 	e <- y - X %*% theta	
 	Vo <- solve(cp %*% X)
-	mswd <- {crossprod(e, W %*% W) %*% e} / {lx - 2}
+	
+	# summary statistics
+	mswd <- {crossprod(e, W %*% W) %*% e} / {lx - 2}	
 	sfit <- sqrt(mswd)
+	n <- length(x)
+	f <- n - 2
+	p <- 1 - pchisq((mswd * f), df = f)
 
 	# output results
 	th <- data.frame(intercept = theta[1], slope = theta[2])
-	ft <- data.frame(mswd = mswd, sfit = sfit)
+	ft <- data.frame(sfit = sfit, mswd = mswd, p = p, n = n)
 	dt <- data.frame(x = x, y = y, sx = sx, sy = sy, e = as.vector(e), w = diag(W))
 	list(coef = th, vcov = Vo, fit = ft, dat = dt)
 }
