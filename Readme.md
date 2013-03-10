@@ -10,8 +10,7 @@ for the construction and interpretation of isochrons.  Two common methods of
 fitting the data are provided as well as functions to determine the age, 
 uncertainty, and fit statistics from the measured data.
 
-Installation 
-------------
+# Installation 
 
 `isochron` is still under active development, so is not yet available from CRAN.
 You can install the latest development version from github using the
@@ -22,11 +21,9 @@ You can install the latest development version from github using the
 	library(isochron)
 
 
-Quick start
------------
+# Quick start
 
-
-### Classic least-squares fitting of isochron data (e.g. *York, 1969*)
+### Classic least-squares fitting of isochron data (e.g. York, 1969)
 
 	data(pdp133)
 	Y <- lsqf(pdp133$x, pdp133$y, pdp133$sx, pdp133$sy)
@@ -56,7 +53,8 @@ Resutls in a list (Y) with the fit coeficients to the data, variance-covariance 
 	6 0.95970 0.291396 0.002399250 1.46e-05 -1.584529e-05 39030.15
 	7 0.65591 0.288728 0.001639775 1.45e-05 -1.796635e-05 48951.84
 
-### Robust fitting of isochron data (*Powell et al., 2002*)
+
+### Robust fitting of isochron data (Powell et al., 2002)
 
 	T <- tnhf(pdp133$x, pdp133$y, pdp133$sx, pdp133$sy)
 
@@ -85,7 +83,7 @@ Gives output in the same format, though notice the different weighting assigned 
 	6 0.95970 0.291396 0.002399250 1.46e-05 -1.610191e-05 1
 	7 0.65591 0.288728 0.001639775 1.45e-05 -1.815367e-05 1
 
-### Plotting Fits to Data (Isochrons)
+### Plotting Isochrons with Fitted Data
 Plotting isochrons of fitted data is accomplished with the function `isoplt`.  For the York fit (Y) above, calling the funtion produces the following plot.
 
 	isoplt(Y, main = "PdP13-3: York Fit", xlab = "176Lu/177Hf", ylab = "176Hf/177Hf")
@@ -105,7 +103,7 @@ I prefer to keep the age determination separate from the fitting and that's the 
 	
 
 
-## Classic least-squares (York) vs robust fitting (Powell).
+# Classic Least-squares (York) vs Robust-fitting (Powell).
 The difference in the two methods can be seen by plotting the data from *Russel, 1995* as illustrated by *Powell et al., 2002*.
 
 	data(russel)
@@ -119,8 +117,7 @@ The resulting isochrons show the differences in weighting by the two routines.  
 ![fit](https://raw.github.com/srmulcahy/isochron/master/inst/img/fit-compare.png)
 
 	
-References
------------
+# References
 
 1. Powell, R., Hergt, J., and Woodhead, J., 2002, Improving isochron calculations with robust statistics and the bootstrap: *Chemical Geology*, v. 185, p. 191–204. ([http](http://www.sciencedirect.com/science/article/pii/S000925410100403X))
 2. Russell, J., 1995, Direct Pb/Pb dating of Silurian macrofossils from Gotland, Sweden: *Geological Society, London, Special Publications*, v. 89, p. 175–200. ([http](http://sp.lyellcollection.org/content/89/1/175.abstract))
