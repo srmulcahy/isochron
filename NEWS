@@ -2,6 +2,8 @@ isochron 0.2.0
 ----------------------------------------------------------------
 
 MINOR FEATURES
+* add p to fit statistics output from `lsqf`
+
 * `tanh` and `tanhci` renamed to `tnhf` and `tnhc` to prevent masking
 
 * `tanhci`  Added `nmad` as input parameter to `tanhci`
@@ -11,7 +13,7 @@ MINOR FEATURES
 BUG FIXES
 * `tanh` masked from project:base
 
-* `tanhci`  Error: object 'P' not found (Fixes #1)
+* `tanhci`  Error: object 'P' not found
 
 
 
