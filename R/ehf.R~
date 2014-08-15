@@ -21,7 +21,8 @@
 #' Y <- lsqf(pdp133$x, pdp133$y, pdp133$sx, pdp133$sy)
 #' ehf(Y$coef$intercept, agema(Y$coef$slope, lambda = 1.867e-11))
 ehf <- function(a, age){
-	chur <- 0.282785 - 0.0336 * (exp(1.867e-11 * age * 1000000) - 1)
+	chur <- 0.282772 - 0.0332 * (exp(1.867e-11 * age * 1000000) - 1)
+  print(chur)
 	epsilon <- (a / chur - 1) * 10000
 	return(epsilon)
 }

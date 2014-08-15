@@ -1,0 +1,30 @@
+Package: isochron
+Title: tools for calculating and plotting isochrons
+Description: isochron is a set of tools that calculate best fit lines
+    to geochemical data for the construction and interpretation of isochrons.
+    Two common methods of fitting the data are provided as well as functions to
+    determine the age, uncertainty, and fit statistics from the measured data.
+URL: 
+Version: 0.2.0
+Maintainer: Sean Mulcahy <srmulcahy@gmail.com>
+Author: Sean Mulcahy <srmulcahy@gmail.com>
+Depends:
+    R (>= 2.11.0)
+Suggests:
+    ggplot2,
+    MASS,
+    plyr
+Imports:
+    ggplot2,
+    MASS,
+    plyr
+License: MIT
+Collate:
+    'agema.R'
+    'ciplt.R'
+    'ehf.R'
+    'isoplt.R'
+    'lsqf.R'
+    'isochron.R'
+    'tnhf.R'
+    'tnhc.R'
